@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./Asset/favicon.ico" type="image/x-icon">
+    <title>查看器 - 2025年广东省教学成果奖网站</title>
+    <link rel="stylesheet" href="./config/styles.css">
+    <link rel="stylesheet" href="./config/pdf-viewer.css">
+</head>
+
+<body>
+    <div class="banner">
+        <!-- 顶部导航栏 - 与首页保持一致 -->
+        <div class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <img src="./Asset/logo在页面中体现一般在左上角就可以了.png" alt="logo">
+                </div>
+                <div class="website-title">
+                    2025年广东省教学成果奖网站
+                </div>
+            </div>
+        </div>
+
+        <!-- 标题部分 - 与首页保持一致 -->
+        <div class="title-section">
+            <div class="title-content">
+                <h1 class="main-title">深耕行业、伴企出海、扎根育人</h1>
+                <p class="sub-title">职业院校境外办学的创新与实践</p>
+
+                <!-- 四个按钮 -->
+                <div class="buttons-group">
+                    <a href="./pdf_viewer.html?title=推荐书&file=./Asset/1推荐书.pdf" class="action-button">推荐书</a>
+                    <a href="./pdf_viewer.html?title=成果总结报告&file=./Asset/2成果总结报告.pdf" class="action-button">成果总结报告</a>
+                    <a href="./pdf_viewer.html?title=必要佐证材料&file=./Asset/4必要佐证材料.pdf" class="action-button">必要佐证材料</a>
+                    <a href="./pdf_viewer.html?title=其他支撑材料&file=./Asset/3其他支撑材料.pdf" class="action-button">其他支撑材料</a>
+                    <a href="./index.html" class="action-button">返回首页</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- PDF查看器主体 -->
+        <div class="main-content">
+            <div class="pdf-viewer-container">
+
+                <div class="pdf-wrapper">
+                    <!-- PDF目录 - 移到左边 -->
+                    <div class="pdf-directory">
+                        <h3 class="directory-title">文档目录</h3>
+                        <ul class="directory-list" id="directoryList">
+                            <!-- 目录内容将通过JavaScript动态生成 -->
+                        </ul>
+                    </div>
+
+                    <div class="pdf-content">
+                        <div class="loading-state" id="loadingIndicator">
+                            <div class="loading-spinner"></div>
+                            <p class="loading-text">正在加载，请稍候...</p>
+                        </div>
+                        <iframe class="pdf-iframe" id="pdfFrame" src=""
+                            onload="document.getElementById('loadingIndicator').style.display='none';"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 底部导航栏 - 与首页保持一致 -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>版权所有 © 广东建设职业技术学院</p>
+        </div>
+    </footer>
+
+    <script src="./config/pdf-viewer.js"></script>
+</body>
+</html>
